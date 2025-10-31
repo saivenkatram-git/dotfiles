@@ -10,7 +10,6 @@ dotfiles/
 │   ├── ghostty/          # Ghostty terminal emulator
 │   ├── nvim/             # Neovim configuration
 │   ├── ohmyposh/         # Oh My Posh prompt theme
-│   └── tmux/             # tmux plugins (Catppuccin theme)
 ├── .tmux.conf            # tmux configuration
 ├── .zshrc                # Zsh shell configuration
 └── zencommit.config.toml # Zen Commit configuration
