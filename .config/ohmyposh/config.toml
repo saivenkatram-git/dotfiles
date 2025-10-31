@@ -1,0 +1,68 @@
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = '#d33682'  # Solarized magenta
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}#dc322f{{end}}', '{{if eq .Code 0}}#d33682{{end}}']  # red / magenta
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+  
+  [[blocks.segments]]
+    template = '{{ .Path }}'
+    foreground = '#268bd2'  # Solarized blue
+    background = 'transparent'
+    type = 'path'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      style = 'full'
+  
+  [[blocks.segments]]
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <#2aa198>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    foreground = '#b58900'  # Solarized yellow for branch
+    background = 'transparent'
+    type = 'git'
+    style = 'plain'
+    [blocks.segments.properties]
+      branch_icon = ''
+      cache_duration = 'none'
+      commit_icon = '@'
+      fetch_status = true
+
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+  
+  [[blocks.segments]]
+    template = '{{ .FormattedMs }}'
+    foreground = '#586e75'  # Solarized base01 (grey)
+    background = 'transparent'
+    type = 'executiontime'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      threshold = 5000
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+  
+  [[blocks.segments]]
+    template = '❯'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+    foreground_templates = ['{{if gt .Code 0}}#dc322f{{end}}', '{{if eq .Code 0}}#d33682{{end}}']  # red / magenta
+    [blocks.segments.properties]
+      cache_duration = 'none'

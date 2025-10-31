@@ -1,0 +1,18 @@
+theme = Solarized Dark Patched
+
+background-opacity = 0.8
+background-blur-radius = 30
+background = #0a141a
+
+font-size=18
+
+font-family = "PlemolJP Console NF"
+
+cursor-style = block
+cursor-style-blink = true
+
+#keybind = global:cmd+ctrl+shift+j=toggle_visibility
+
+macos-option-as-alt = left
+keybind = alt+left=unbind
+keybind = alt+right=unbind
