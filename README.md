@@ -1,8 +1,8 @@
-# 🔧 My Dotfiles
+## My Dotfiles
 
 A collection of my personal configuration files for macOS development environment.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 dotfiles/
@@ -15,7 +15,7 @@ dotfiles/
 └── zencommit.config.toml # Zen Commit configuration
 ```
 
-## 🚀 What's Included
+## What's Included
 
 ### Terminal & Shell
 
@@ -67,7 +67,7 @@ Fully configured Neovim setup (`.config/nvim/`) with:
 - **Productivity**: Todo-comments, Trouble, auto-session, which-key
 - **AI Integration**: AI assistant plugins, Copilot
 
-## 📚 Additional Notes
+## Additional Notes
 
 - Neovim configuration uses Lua exclusively
 - Plugin management handled by lazy.nvim
