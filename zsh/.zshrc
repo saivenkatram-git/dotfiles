@@ -221,3 +221,6 @@ alias idea="open -a 'IntelliJ IDEA'"
 alias reload="source ~/.zshrc"
 alias zshconfig="nvim ~/.zshrc"
 
+
+# opencode
+export PATH=/home/sai/.opencode/bin:$PATH
