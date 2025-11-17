@@ -2,19 +2,6 @@
 
 A collection of my personal configuration files for macOS development environment.
 
-## Repository Structure
-
-```
-dotfiles/
-├── .config/
-│   ├── ghostty/          # Ghostty terminal emulator
-│   ├── nvim/             # Neovim configuration
-│   ├── ohmyposh/         # Oh My Posh prompt theme
-├── .tmux.conf            # tmux configuration
-├── .zshrc                # Zsh shell configuration
-└── zencommit.config.toml # Zen Commit configuration
-```
-
 ## What's Included
 
 ### Terminal & Shell
