@@ -26,6 +26,22 @@
 export ZSH="$HOME/.oh-my-zsh"
 fastfetch
 
+# SSH Agent (Linux only)
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    SSH_ENV="$XDG_RUNTIME_DIR/ssh-agent.env"
+    
+    if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+        ssh-agent > "$SSH_ENV"
+    fi
+    
+    if [[ ! "$SSH_AUTH_SOCK" ]] && [[ -f "$SSH_ENV" ]]; then
+        source "$SSH_ENV" >/dev/null
+    fi
+    
+    # Auto-add github key
+    ssh-add ~/.ssh/github 2>/dev/null
+fi
+
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
@@ -224,3 +240,4 @@ alias zshconfig="nvim ~/.zshrc"
 
 # opencode
 export PATH=/home/sai/.opencode/bin:$PATH
+
