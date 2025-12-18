@@ -1,12 +1,8 @@
-theme = TokyoNight Night
+theme = Gruvbox Dark
 
-background-opacity = 0.9
-background-blur-radius = 30
-
-font-size=14
-
-font-family = "JetBrains Mono"
-
+background-opacity = 1.0
+font-size= 16
+font-family = "JetBrains Mono Font" 
 cursor-style = block
 cursor-style-blink = true
 

@@ -24,7 +24,6 @@
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 export ZSH="$HOME/.oh-my-zsh"
-fastfetch
 
 # SSH Agent (Linux only)
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then

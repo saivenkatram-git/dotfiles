@@ -11,6 +11,7 @@ return {
       highlight = {
         enable = true,
         disable = { "markdown", "markdown_inline" },
+        additional_vim_regex_highlighting = false,
       },
       -- enable indentation
       indent = { enable = true },
@@ -20,14 +21,13 @@ return {
         "javascript",
         "typescript",
         "tsx",
+        "python",
         "yaml",
         "html",
         "css",
-        "prisma",
         "markdown",
         "markdown_inline",
         "svelte",
-        "graphql",
         "bash",
         "lua",
         "vim",
